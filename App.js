@@ -8,7 +8,7 @@ export default function App() {
     setGrocText(groc);
   }
   function addHandler() {
-    setGrocList((currentGrocList) => [...grocList, grocText]);//Best way to update state with its values.
+    setGrocList((currentGrocList) => [...grocList, grocText]);   //Best way to update state with its values.
   }
   return (
     <View style={styles.appContainer}>
@@ -18,7 +18,9 @@ export default function App() {
       </View>
       <View style={styles.groceryContainer}>
         {grocList.map((things) => (
-          <Text key={things}>{things}</Text>
+          <View key={things}>
+            <Text style={styles.groceryList}>{things}</Text>
+          </View>
         ))}
       </View>
     </View>
@@ -54,6 +56,10 @@ const styles = StyleSheet.create({
   },
   groceryContainer: {
     flex: 3,
-    backgroundColor: "white",
   },
+  groceryList: {
+    color: "white",
+    fontSize: 28,
+  },
+  
 });
