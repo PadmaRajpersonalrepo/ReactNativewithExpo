@@ -5,7 +5,7 @@ export default function App() {
     <View style={styles.appContainer}>
       <View style={styles.inputContainer}>
         <TextInput style={styles.textInput}/>
-        <Button title="Add Grocery" color="#0CCFF5" />
+        <Button title="Add Grocery" color="#5A4FCF" />
       </View>
       <View style={styles.groceryContainer}>
         <Text>Groceries List</Text>
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     alignItems: "center",
     paddingBottom: 24,
     borderBottomWidth: 1,
@@ -32,8 +32,9 @@ const styles = StyleSheet.create({
   textInput: {
     borderWidth: 1,
     width: "65%",
+    height:40,
     marginRight: 4,
-    borderRadius: 30,
+    borderRadius: 15,
     padding: 8,
     borderWidth: 3,
     borderColor: "#FEBF00",
